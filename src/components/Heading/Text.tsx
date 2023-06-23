@@ -19,7 +19,7 @@ export default function Text({ size, weight, color, value }: TextProps) {
 }
 
 const Span = styled.span<SpanProps>`
-  font-size: ${({ size }) => size}px;
+  font-size: ${({ size }) => size};
   font-weight: ${({ weight }) => weight};
   color: ${({ color }) => color};
 `;

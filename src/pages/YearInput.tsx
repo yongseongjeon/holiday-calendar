@@ -13,7 +13,7 @@ function YearInput() {
         <Text size="1.7rem" weight="700" color="black" value="공휴일을 확인하고 싶은 연도를 입력해주세요"></Text>
         <Input value={year} onChange={handleChangeInput} />
       </Header>
-      <CreateCalendarButton />
+      <CreateCalendarButton year={year} />
     </Container>
   );
 }

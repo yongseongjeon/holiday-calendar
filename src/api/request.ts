@@ -17,12 +17,12 @@ export async function request({ url, method, body }: requestProps): Promise<any>
   return fetch(url, options);
 }
 
-interface fetchHolidaiesProps {
+interface fetchHolidaysProps {
   year: string;
   month: string;
 }
 
-export function fetchHolidaies({ year, month }: fetchHolidaiesProps) {
+export function fetchHolidays({ year, month }: fetchHolidaysProps) {
   const url = `/getRestDeInfo`;
   const apiKey = process.env.REACT_APP_API_KEY;
   const requestUrl = `${url}?serviceKey=${apiKey}&solYear=${year}&solMonth=${month}&pageNo=1&numOfRows=100`;

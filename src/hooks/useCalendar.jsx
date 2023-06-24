@@ -34,7 +34,7 @@ function useCalendar({ dates, containerRef, isHolidays }) {
         }),
         Plot.text(
           d3.utcMonths(d3.utcMonth(start), end).map(d3.utcMonday.ceil),
-          calendar({ text: d3.utcFormat("%b"), frameAnchor: "middle", y: -1 })
+          calendar({ text: d3.utcFormat("%b"), frameAnchor: "middle", y: -1, fontSize: "16", fontWeight: 700 })
         ),
       ],
     });

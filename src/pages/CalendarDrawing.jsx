@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { useParams } from "react-router-dom";
-import Text from "../components/Heading/Text";
+import Text from "../components/Text";
 import { styled } from "styled-components";
 import useHoliday from "../hooks/useHoliday";
 import useCalendar from "../hooks/useCalendar";

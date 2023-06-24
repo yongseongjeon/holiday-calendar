@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Text from "../Heading/Text";
+import Text from "./Text";
 
 export default function Button({ value, onClick }: any) {
   return (

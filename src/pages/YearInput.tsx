@@ -1,7 +1,7 @@
-import Text from "../components/Heading/Text";
+import Text from "../components/Text";
 import styled from "styled-components";
-import Input from "../components/Input/Input";
-import CreateCalendarButton from "../components/CreateCalendarButton/CreateCalendarButton";
+import Input from "../components/Input";
+import CreateCalendarButton from "../components/CreateCalendarButton";
 import useInput from "../hooks/useInput";
 
 function YearInput() {

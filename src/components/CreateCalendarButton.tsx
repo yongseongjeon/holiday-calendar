@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import Button from "../Button/Button";
+import Button from "./Button";
 
 interface CreateCalendarButtonProps {
   year: string;

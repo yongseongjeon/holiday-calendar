@@ -23,7 +23,7 @@ interface fetchHolidaiesProps {
 }
 
 export function fetchHolidaies({ year, month }: fetchHolidaiesProps) {
-  const url = `${process.env.REACT_APP_API_URL}/getRestDeInfo`;
+  const url = `/getRestDeInfo`;
   const apiKey = process.env.REACT_APP_API_KEY;
   const requestUrl = `${url}?serviceKey=${apiKey}&solYear=${year}&solMonth=${month}&pageNo=1&numOfRows=100`;
   return request({ url: requestUrl, method: "GET" });

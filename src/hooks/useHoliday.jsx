@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 import { fetchHolidays } from "../api/request";
 
-const initialStateIsHolidays = Array.from({ length: 13 }, () => Array.from({ length: 32 }, () => false));
+const YEAR_COUNT = 12;
+const MONTH_COUNT = 31;
+// 인덱스가 0인 첫 번째 원소는 사용하지 않기 때문에 연도, 월에 +1
+const initialStateIsHolidays = Array.from({ length: YEAR_COUNT + 1 }, () => Array.from({ length: MONTH_COUNT + 1 }, () => false));
 
 export default function useHoliday(year) {
   const [isHolidays, setIsHolidays] = useState(initialStateIsHolidays);

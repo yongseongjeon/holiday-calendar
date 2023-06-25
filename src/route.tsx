@@ -1,4 +1,4 @@
-import Result from "./pages/CalendarDrawing";
+import Result from "./pages/Calendar";
 import YearInput from "./pages/YearInput";
 import { RoutePath } from "./types/Route";
 

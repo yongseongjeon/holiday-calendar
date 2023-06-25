@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import * as Plot from "@observablehq/plot";
 import * as d3 from "d3";
 
-function useCalendar({ dates, containerRef, isHolidays }) {
+function useCalendarDrawer({ dates, containerRef, isHolidays }) {
   useEffect(() => {
     const start = d3.utcDay.offset(d3.min(dates, ({ date }) => date));
     const end = d3.utcDay.offset(d3.max(dates, ({ date }) => date));
@@ -23,7 +23,7 @@ function useCalendar({ dates, containerRef, isHolidays }) {
         Plot.cell(dates, {
           x: ({ date }) => d3.utcWeek.count(d3.utcYear(date), date),
           y: ({ date }) => date.getUTCDay(),
-          fill: ({ isHoliday }) => (isHoliday ? "#e74c3c" : "#ecf0f1"),
+          fill: ({ isHoliday }) => (isHoliday ? "#eb4d4b" : "#ecf0f1"),
           inset: 1,
         }),
         Plot.text(dates, {
@@ -45,7 +45,7 @@ function useCalendar({ dates, containerRef, isHolidays }) {
   }, [isHolidays]);
 }
 
-export default useCalendar;
+export default useCalendarDrawer;
 
 function calendar({ date = Plot.identity, inset = 0.5, ...options } = {}) {
   let D;

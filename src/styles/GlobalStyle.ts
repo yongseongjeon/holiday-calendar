@@ -24,4 +24,10 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     color: black;
   }
+
+  /* 캘린더의 Y축 요일 부분 */
+  .App div svg > g:nth-child(2) {
+    font-size: 16px;
+    font-weight: bold;
+  }
 `;

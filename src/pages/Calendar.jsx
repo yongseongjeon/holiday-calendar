@@ -3,18 +3,20 @@ import { useParams } from "react-router-dom";
 import Text from "../components/Text";
 import { styled } from "styled-components";
 import useHoliday from "../hooks/useHoliday";
-import useCalendar from "../hooks/useCalendar";
+import useCalendarDrawer from "../hooks/useCalendarDrawer";
+import Loading from "../components/Loading";
 
-function CalendarDrawing() {
+function Calendar() {
   const containerRef = useRef();
   const params = useParams();
   const year = Number(params.year);
-  const isHolidays = useHoliday(year);
+  const [isHolidays, isLoading] = useHoliday(year);
   const dates = createDates(year, isHolidays);
-  useCalendar({ dates, containerRef, isHolidays });
+  useCalendarDrawer({ dates, containerRef, isHolidays });
 
   return (
     <>
+      {isLoading && <Loading />}
       <div ref={containerRef} />
       <Content>
         <Text size="2rem" weight="700" color="black" value={`${year}년도의 공휴일은 총 ${getTotalHolidayCnt(isHolidays)}일입니다.`} />
@@ -23,7 +25,7 @@ function CalendarDrawing() {
   );
 }
 
-export default CalendarDrawing;
+export default Calendar;
 
 const Content = styled.div`
   display: flex;
